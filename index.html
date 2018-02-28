@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Very simplified api ui</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+
+        <header></header>
+
+        <select class="type" onchange="makeRequest(this.value);">
+            <option value='' selected='selected'></option> <!-- to not display data if type haven't selected by user -->
+            <option value="json">json</option>
+            <option value="xml">xml</option>
+        </select>
+
+        <ul id="data"></ul>
+    </body>
+</html>
