@@ -26,7 +26,7 @@ let model = {
         return tmp.parseFromString( data , "text/xml" );
     },
                                                                 // ------- convert xml to proceed with one data type
-    xmlTojson(xml){
+    xmlToJson(xml){
         let xmlData = {};
 
         let details = xml.getElementsByTagName(DOM.tagName);
@@ -55,7 +55,7 @@ let controller = {
 
     xmlData(xmlText){
         let xml = model.parseXsml(xmlText);
-        let data = model.xmlTojson(xml);
+        let data = model.xmlToJson(xml);
         data.format = 'xml';
         storage.setData(data);
         buildList();
